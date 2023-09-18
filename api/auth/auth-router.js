@@ -34,8 +34,11 @@ router.post(
   "/register",
   checkUsernameFree,
   checkPasswordLength,
-  (req, res, next) => {
-    res.json("Hello from router register");
+  async (req, res, next) => {
+    // try {
+    // } catch (err) {
+    //   next(err);
+    // }
   }
 );
 
