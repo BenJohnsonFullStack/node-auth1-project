@@ -26,8 +26,8 @@ const User = require("./users-model");
  */
 router.get("/", restricted, async (req, res, next) => {
   try {
-    const result = await User.get();
-    res.json(result);
+    const users = await User.get();
+    res.json(users);
   } catch (err) {
     next(err);
   }
