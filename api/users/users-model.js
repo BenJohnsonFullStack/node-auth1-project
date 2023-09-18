@@ -18,7 +18,10 @@ function getBy(filter) {
   resolves to the user { user_id, username } with the given user_id
  */
 function getById(user_id) {
-  return db("users").where("id", user_id).first().select("user_id", "username");
+  return db("users")
+    .where("user_id", user_id)
+    .first()
+    .select("user_id", "username");
 }
 /**
   resolves to the newly inserted user { user_id, username }

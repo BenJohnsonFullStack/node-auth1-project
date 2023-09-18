@@ -51,7 +51,6 @@ async function checkUsernameExists(req, res, next) {
   } catch (err) {
     next(err);
   }
-  next();
 }
 
 /*
