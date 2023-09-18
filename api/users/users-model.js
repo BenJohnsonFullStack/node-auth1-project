@@ -11,7 +11,7 @@ function get() {
   resolves to an ARRAY with all users that match the filter condition
  */
 function getBy(filter) {
-  return db("users").where(filter).select("user_id", "username");
+  return db("users").where(filter);
 }
 
 /**
