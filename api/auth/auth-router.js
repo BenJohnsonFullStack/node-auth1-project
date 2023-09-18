@@ -24,6 +24,9 @@ const router = require("express").Router();
     "message": "Password must be longer than 3 chars"
   }
  */
+router.post("/register", (req, res, next) => {
+  res.json("Hello from router register");
+});
 
 /**
   2 [POST] /api/auth/login { "username": "sue", "password": "1234" }
@@ -40,6 +43,9 @@ const router = require("express").Router();
     "message": "Invalid credentials"
   }
  */
+router.post("/login", (req, res, next) => {
+  res.json("Hello from router login");
+});
 
 /**
   3 [GET] /api/auth/logout
@@ -56,8 +62,8 @@ const router = require("express").Router();
     "message": "no session"
   }
  */
-router.get("/", (req, res, next) => {
-  res.json("Hello from router");
+router.get("/logout", (req, res, next) => {
+  res.json("Hello from router logout");
 });
 
 // Don't forget to add the router to the `exports` object so it can be required in other modules
